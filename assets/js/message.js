@@ -8,6 +8,6 @@ function getHtmlAlert(type, message){
              </div>`
  }
  
-export function showAlert(type, message, divElement){
-    divElement.innerHTML= getHtmlAlert(type, message);
+export function showMessage(type, message, divElement){
+    divElement.innerHTML += getHtmlAlert(type, message);
  }
