@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'shamrock': {
+                            '50': '#ebfef6',
+                            '100': '#cffce6',
+                            '200': '#a3f7d3',
+                            '300': '#67eebd',
+                            '400': '#31dda4',
+                            '500': '#06c38b',
+                            '600': '#009e72',
+                            '700': '#007f5f',
+                            '800': '#01644b',
+                            '900': '#025240',
+                            '950': '#002e25',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <title>Signin</title>
+</head>
+
+<body class="min-h-screen bg-shamrock-50">
+    <main class="min-h-screen grid grid-cols-1 md:grid-cols-2 overflow-hidden">
+        <section class="flex items-center justify-center px-6 py-10 md:px-10 bg-shamrock-50">
+            <div class="w-full max-w-lg rounded-2xl bg-white p-8 shadow-xl md:p-10">
+                <div id="alert-message"></div>
+
+                <div class="mb-8 text-center">
+                    <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-shamrock-100">
+                        <span class="text-3xl">👤</span>
+                    </div>
+
+                    <h1 class="text-4xl font-bold text-gray-800">Iniciar sesión</h1>
+                    <p class="mt-2 text-gray-500">Bienvenido a la plataforma</p> <!-- Edita -->
+                </div>
+
+                <form class="space-y-4" id="form-login">
+
+                    <div class="relative">
+                        <i class="fa-solid fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-shamrock-500"></i>
+                        <input
+                            type="email"
+                            id="email-user-login"
+                            placeholder="Correo electrónico"
+                            class="w-full rounded-xl border border-gray-300 bg-gray-50 py-3 pl-12 pr-4 transition duration-300 focus:outline-none focus:ring-2 focus:ring-shamrock-200 focus:border-shamrock-500 hover:border-shamrock-300"
+                        >
+                    </div>
+
+                    <div class="relative">
+                        <i class="fa-solid fa-lock absolute left-4 top-1/2 -translate-y-1/2 text-shamrock-500"></i>
+                        <input
+                            type="password"
+                            id="password-user-login"
+                            placeholder="Contraseña"
+                            class="w-full rounded-xl border border-gray-300 bg-gray-50 py-3 pl-12 pr-4 transition duration-300 focus:outline-none focus:ring-2 focus:ring-shamrock-200 focus:border-shamrock-500 hover:border-shamrock-300"
+                        >
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        id="login"
+                        class="w-full rounded-xl bg-shamrock-500 py-3 font-semibold text-white shadow-md transition duration-300 hover:bg-shamrock-600 hover:shadow-lg"
+                    >
+                        Iniciar sesión
+                    </button>
+                    <div class="text-sm font-light text-center">No tengo cuenta <a href="./signup.html" class="font-medium text-shamrock-800 hover:underline "> crear cuenta</a></div>
+                </form>
+            </div>
+        </section>
+
+        <section class="min-h-[320px] bg-cover bg-center md:min-h-screen" id="image-register"></section>
+    </main>
+</body>
+    
+    <script type="module" src="assets/js/index.js"></script>
+</html>
